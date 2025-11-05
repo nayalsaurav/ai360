@@ -1,16 +1,17 @@
 "use client";
+
 import { motion } from "motion/react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 
 const Dashboard = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white px-6 py-10">
+    <div className="min-h-screen bg-background px-6 py-10">
       {/* Header Section */}
       <div className="text-center mb-10">
-        <h1 className="text-4xl font-bold text-gray-900 mb-2">
+        <h1 className="text-4xl font-bold text-foreground mb-2">
           🌐 Global AI Insights Dashboard
         </h1>
-        <p className="text-gray-600 max-w-2xl mx-auto">
+        <p className="text-muted-foreground max-w-2xl mx-auto">
           Explore real-time analytics and trends about artificial intelligence —
           from training computation to adoption rates and global perspectives.
         </p>
@@ -24,11 +25,9 @@ const Dashboard = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <Card className="shadow-md hover:shadow-xl transition-all duration-300 rounded-2xl overflow-hidden">
+          <Card className="transition-all duration-300 rounded-2xl overflow-hidden hover:shadow-lg">
             <CardHeader>
-              <CardTitle className="text-lg font-semibold text-gray-800">
-                AI Training Computation Growth
-              </CardTitle>
+              <CardTitle>AI Training Computation Growth</CardTitle>
             </CardHeader>
             <CardContent className="relative w-full pt-[56.25%]">
               <iframe
@@ -47,11 +46,9 @@ const Dashboard = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <Card className="shadow-md hover:shadow-xl transition-all duration-300 rounded-2xl overflow-hidden">
+          <Card className="transition-all duration-300 rounded-2xl overflow-hidden hover:shadow-lg">
             <CardHeader>
-              <CardTitle className="text-lg font-semibold text-gray-800">
-                Cumulative AI Systems by Country
-              </CardTitle>
+              <CardTitle>Cumulative AI Systems by Country</CardTitle>
             </CardHeader>
             <CardContent>
               <iframe
@@ -70,13 +67,10 @@ const Dashboard = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2 }}
-          className="lg:col-span-2"
         >
-          <Card className="shadow-md hover:shadow-xl transition-all duration-300 rounded-2xl overflow-hidden">
+          <Card className="transition-all duration-300 rounded-2xl overflow-hidden hover:shadow-lg">
             <CardHeader>
-              <CardTitle className="text-lg font-semibold text-gray-800">
-                Public Views on AI’s Impact (Next 20 Years)
-              </CardTitle>
+              <CardTitle>Public Views on AI’s Impact (Next 20 Years)</CardTitle>
             </CardHeader>
             <CardContent>
               <iframe
