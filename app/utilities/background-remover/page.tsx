@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useRef } from "react";
+
 import {
   Card,
   CardContent,
@@ -12,7 +13,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Loader2, Upload, Download, AlertCircle } from "lucide-react";
 import Image from "next/image";
+
 import { Skeleton } from "@/components/ui/skeleton";
+import { Image as IKImage } from "@imagekit/next";
 
 export default function BackgroundRemoverPage() {
   const [loading, setLoading] = useState(false);
@@ -187,12 +190,13 @@ export default function BackgroundRemoverPage() {
 
                 {result && !loading && (
                   <>
-                    <div className="relative w-full h-64 bg-muted rounded-lg overflow-hidden border border-border">
-                      <Image
+                    <div className="relative w-full  bg-muted rounded-lg overflow-hidden border border-border">
+                      <IKImage
                         src={result}
-                        alt="Result"
-                        fill
-                        className="object-contain"
+                        alt="Photo with background removal"
+                        width={500}
+                        height={500}
+                        transformation={[{ aiRemoveBackground: true }]}
                       />
                     </div>
                     <Button
