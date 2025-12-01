@@ -83,11 +83,10 @@ export default function ImageEditorPanel() {
     ...(imageSettings.invert > 0 ? [{ e: "invert" }] : []),
   ];
 
-  const imageSrc = "https://ik.imagekit.io/ikmedia/blue-bmw.jpg"; // Replace with your image
+  const imageSrc = "https://ik.imagekit.io/ikmedia/blue-bmw.jpg";
 
   return (
     <div className="grid md:grid-cols-2 gap-6 items-start">
-      {/* Image Preview */}
       <div className="flex justify-center bg-gray-50 border rounded-xl p-4">
         <IKImage
           src={imageSrc}

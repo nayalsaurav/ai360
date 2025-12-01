@@ -14,6 +14,7 @@ import {
   SidebarMenuItem,
   SidebarRail,
 } from "@/components/ui/sidebar";
+import Link from "next/link";
 
 // Utility tools list
 const utilities = [
@@ -36,6 +37,10 @@ const utilities = [
   {
     title: "Image Generator",
     url: "/utilities/image-generator",
+  },
+  {
+    title: "Image Editor",
+    url: "/utilities/image-editor",
   },
   {
     title: "Background Remover",
@@ -76,9 +81,9 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               return (
                 <SidebarMenuItem key={tool.title}>
                   <SidebarMenuButton asChild isActive={isActive}>
-                    <a href={tool.url} className="flex items-center gap-2">
+                    <Link href={tool.url} className="flex items-center gap-2">
                       <span>{tool.title}</span>
-                    </a>
+                    </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               );
