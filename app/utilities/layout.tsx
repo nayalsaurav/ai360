@@ -5,7 +5,6 @@ export default function Home({ children }: { children: React.ReactNode }) {
     <Sidebar>
       <ImageKitProvider
         urlEndpoint={process.env.NEXT_PUBLIC_IMAGEKIT_URL_ENDPOINT!}
-        // publicKey={process.env.NEXT_PUBLIC_IMAGEKIT_PUBLIC_KEY!}
       >
         {children}
       </ImageKitProvider>

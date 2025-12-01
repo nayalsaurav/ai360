@@ -22,6 +22,10 @@ const utilities = [
     url: "/utilities/text-summarizer",
   },
   {
+    title: "Flowchart Generator",
+    url: "/utilities/flowchart-generator",
+  },
+  {
     title: "Email Template Generator",
     url: "/utilities/email-template-generator",
   },
