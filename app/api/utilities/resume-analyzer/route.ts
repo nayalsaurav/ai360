@@ -257,7 +257,7 @@ async function analyzeResume(
     const fileBuffer = Buffer.from(buffer);
 
     const response = await ai.models.generateContent({
-      model: process.env.GOOGLE_AI_MODEL || "gemini-2.0-flash",
+      model: process.env.GOOGLE_AI_MODEL || "gemini-2.5-flash",
       contents: [
         {
           role: "user",
